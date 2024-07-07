@@ -14,16 +14,10 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="#bottom"
-          >go to Bottom
-          <img
-            class="icon"
-            src="images/navigation-arrow-chevron-direction-forward-move-down-icon-svgrepo-com.svg"
-            alt="go down icon"
-        /></a>
+      <nav id="top">
+        <a class="link" href="#bottom">Jump to bottom</a>
       </nav>
-      <h1 id="top">Lorem Ipsum</h1>
+      <h1>Lorem Ipsum</h1>
     </header>
     <article>
       <h2>What is <span>Lorem Ipsum?</span></h2>
@@ -202,16 +196,69 @@
         pains."
       </p>
     </article>
+    <h1>Send an article to a friend!</h1>
+    <form>
+      <div>
+        <label for="first">First Name</label>
+        <input
+          type="text"
+          id="first"
+          name="firstname"
+          placeholder="Enter your first name"
+          required
+        />
+        <label for="last">Last name</label>
+        <input
+          type="text"
+          id="last"
+          name="lastname"
+          placeholder="Enter your Last name"
+          required
+        />
+      </div>
+      <div>
+        <label for="phone">Enter your phone number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Your phone number"
+          pattern="[0-9]{0-9}-[0-9]{0-9}-[0-9]{0-9}"
+        />
+      </div>
+      <div>
+        <label for="division">Select age group</label>
+        <select name="division" id="division">
+          <option value="kids">Under 18</option>
+          <option value="adults">18-50</option>
+          <option value="seniors">50+</option>
+        </select>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email adress"
+          required
+        />
+      </div>
+      <label for="message">send message</label>
+      <textarea
+        placeholder="type your message"
+        id="message"
+        name="message"
+        rows="5"
+        cols="33"
+      ></textarea>
+      <button type="button">Register</button>
+    </form>
     <footer id="bottom">
-      <a href="#top"
-        >Jump to top
-        <img
-          class="icon"
-          src="images/navigation-arrow-chevron-direction-forward-move-up-icon-svgrepo-com.svg"
-          alt="go up icon"
-      /></a>
-      <br />
-      <a href="https://www.lipsum.com">Reference site!</a>
+      <div>
+        <a class="link" href="#top">Jump to top</a>
+        <a class="link" href="https://www.lipsum.com">Reference site!</a>
+      </div>
     </footer>
   </body>
 </html>

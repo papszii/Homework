@@ -61,6 +61,8 @@ table {
     font-style: normal;
 }
 
+/* Main style */
+
 body{
     background-color: #457b9d;
 }
@@ -100,22 +102,20 @@ p{
     text-align: justify;
 }
 
-
-#bottom{
-    margin: 0;
-    padding: 0;
-}
-
 span{
     color: #fefae0;
 }
 
+/* SVG icons */
+
 .icon{
-    min-width: 20px;
-    max-width: 20px;
-    min-height: 20px;
-    max-height: 20px;
+    min-width: 0.8em;
+    max-width: 0.8em;
+    min-height: 0.8em;
+    max-height: 0.8em;
 }
+
+/* Hidden picture alt */
 
 .container {
     display: flex;
@@ -130,7 +130,7 @@ span{
 .overlay {
     position: relative;
     bottom: 0;
-    background: #00000080; /* Black see-through */
+    background: #00000080;
     color: #fefae0;
     min-width: 180px;
     max-width: 180px;
@@ -151,6 +151,63 @@ img {
     box-shadow: 10px 10px black;
 }
 
+/* paragraph with no image */
+
 .noimage{
     max-width: 700px;
+}
+
+/* Forms style */
+
+form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #457b9d;
+      border-radius: 5px;
+  }
+  
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #fefae0;
+    border-radius: 5px;
+}
+button {
+    background-color: #457b9d;
+    color: #fefae0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    box-shadow: #000000 0 3px 15px inset, #fefae0 0 3px 5px, #fefae0 0 10px 13px;
+  transform: scale(1.05);
+}
+
+/* jump to top, bottom, reference */
+
+.link {
+    background-color: #457b9d;
+    color: #fefae0;
+    padding: 10px;
+    margin: 10px;
+    border: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.link:hover {
+  box-shadow: #000000 0 3px 15px inset, #fefae0 0 3px 5px, #fefae0 0 10px 13px;
+  transform: scale(1.05);
 }

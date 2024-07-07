@@ -106,15 +106,6 @@ span{
     color: #fefae0;
 }
 
-/* SVG icons */
-
-.icon{
-    min-width: 0.8em;
-    max-width: 0.8em;
-    min-height: 0.8em;
-    max-height: 0.8em;
-}
-
 /* Hidden picture alt */
 
 .container {

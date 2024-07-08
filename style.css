@@ -67,6 +67,14 @@ body{
     background-color: #457b9d;
 }
 
+header{
+    background-color: #1c3342;
+}
+
+.down{
+    background-color: #1c3342;
+}
+
 h1{
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -99,7 +107,7 @@ p{
     line-height: 30px;
     margin: 0.5em 0.5em 0.5em 0;
     padding: 0.5em 0.5em 0.5em 0;
-    text-align: justify;
+    text-align: start;
 }
 
 span{
@@ -171,7 +179,7 @@ textarea {
     border: 1px solid #fefae0;
     border-radius: 5px;
 }
-button {
+#register {
     background-color: #457b9d;
     color: #fefae0;
     padding: 10px 20px;
@@ -180,7 +188,7 @@ button {
     cursor: pointer;
     margin-top: 10px;
 }
-button:hover {
+#register:hover {
     box-shadow: #000000 0 3px 15px inset, #fefae0 0 3px 5px, #fefae0 0 10px 13px;
   transform: scale(1.05);
 }
@@ -188,14 +196,13 @@ button:hover {
 /* jump to top, bottom, reference */
 
 .link {
-    background-color: #457b9d;
+    background-color: #1c3342;
     color: #fefae0;
     padding: 10px;
     margin: 10px;
     border: 10px;
     border-radius: 10px;
     cursor: pointer;
-    float: left;
 }
 
 .link:hover {

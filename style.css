@@ -86,7 +86,43 @@ h1{
     text-align: center;
     text-shadow: 5px 5px black;
     color: #fefae0;
-    
+
+    /* animation style */
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex: auto;
+    flex-basis: auto;
+    min-width: 400px;
+    opacity: 0;
+    animation-name: textFader;
+    animation-duration: 18s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+h1:first-of-type { animation-delay: 0s; }
+h1:nth-of-type(2) { animation-delay: 6s; }
+h1:last-of-type { animation-delay: 12s; }
+
+@keyframes textFader {
+  0% {
+    opacity: 0;
+  } /* fade-in */
+  11% {
+    opacity: 1;
+  } /* show */
+  22% {
+    opacity: 1;
+  } /* fade-out */
+  33% { /* <-------------------{ 100% / num(H2) = 33% } */
+    opacity: 0;
+  } /* waiting for the finish animation of other blocks */
+  100% {
+    opacity: 0;
+  }
 }
 
 h2{

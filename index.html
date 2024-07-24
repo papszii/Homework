@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>Hazifeladat</title>
     <link rel="stylesheet" href="style.css" media="screen" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,13 +19,20 @@
     <header>
       <nav id="top">
         <a class="link" href="#bottom">Jump to bottom</a>
+        <a class="link" href="#paragraph1">What is <span>Lorem Ipsum</span></a>
+        <a class="link" href="#paragraph2">Why do we use it?</a>
+        <a class="link" href="#paragraph3">Where does it come from?</a>
+        <a class="link" href="#paragraph4">Where can I get some?</a>
+        <a class="link" href="#paragraph5"
+          >The standard <span>Lorem Ipsum</span></a
+        >
       </nav>
     </header>
     <article>
       <h1>Lorem Ipsum</h1>
       <h1>Dolor sit amet</h1>
       <h1>Consectetur adipiscing elit</h1>
-      <h2>What is <span>Lorem Ipsum?</span></h2>
+      <h2 id="paragraph1">What is <span>Lorem Ipsum?</span></h2>
       <div class="container">
         <img
           src="/images/lorem1.png"
@@ -45,7 +55,7 @@
           </p>
         </div>
       </div>
-      <h2>Why do we use it?</h2>
+      <h2 id="paragraph2">Why do we use it?</h2>
       <div class="container">
         <img src="/images/lorem2.png" alt="diagonal layout" class="image" />
         <div class="overlay">Diagonal layout lorem ipsum</div>
@@ -65,7 +75,7 @@
           </p>
         </div>
       </div>
-      <h2>Where does it come from?</h2>
+      <h2 id="paragraph3">Where does it come from?</h2>
       <div class="container">
         <img src="/images/lorem3.png" alt="layout based" class="image" />
         <div class="overlay">Layout based lorem ipsum</div>
@@ -84,7 +94,7 @@
           </p>
         </div>
       </div>
-      <h2>Where can I get some?</h2>
+      <h2 id="paragraph4">Where can I get some?</h2>
       <div class="container">
         <img
           src="/images/lorem4.png"
@@ -100,17 +110,18 @@
             which don't look even slightly believable. If you are going to use a
             passage of <span>Lorem Ipsum</span>, you need to be sure there isn't
             anything embarrassing hidden in the middle of text. All the
-            <span>Lorem Ipsum</span> generators on the Internet tend to repeat
-            predefined chunks as necessary, making this the first true generator
-            on the Internet. It uses a dictionary of over 200 Latin words,
-            combined with a handful of model sentence structures, to generate
-            Lorem Ipsum which looks reasonable. The generated
-            <span>Lorem Ipsum</span> is therefore always free from repetition,
-            injected humour, or non-characteristic words etc.
+            <span>Lorem Ipsum</span>
+            <a id="url" href="https://loremipsum.io/generator">generators</a> on
+            the Internet tend to repeat predefined chunks as necessary, making
+            this the first true generator on the Internet. It uses a dictionary
+            of over 200 Latin words, combined with a handful of model sentence
+            structures, to generate Lorem Ipsum which looks reasonable. The
+            generated <span>Lorem Ipsum</span> is therefore always free from
+            repetition, injected humour, or non-characteristic words etc.
           </p>
         </div>
       </div>
-      <h2>
+      <h2 id="paragraph5">
         The standard <span>Lorem Ipsum</span> passage, used since the 1500s
       </h2>
       <p class="noimage">
@@ -122,7 +133,7 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
         officia deserunt mollit anim id est laborum."
       </p>
-      <h2>
+      <h2 id="paragraph6">
         Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in
         45 BC
       </h2>
@@ -143,7 +154,7 @@
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?"
       </p>
-      <h2>1914 translation by H. Rackham</h2>
+      <h2 id="paragraph7">1914 translation by H. Rackham</h2>
       <p class="noimage">
         "But I must explain to you how all this mistaken idea of denouncing
         pleasure and praising pain was born and I will give you a complete
@@ -160,7 +171,7 @@
         a man who chooses to enjoy a pleasure that has no annoying consequences,
         or one who avoids a pain that produces no resultant pleasure?"
       </p>
-      <h2>
+      <h2 id="paragraph8">
         Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in
         45 BC
       </h2>
@@ -179,7 +190,7 @@
         voluptatibus maiores alias consequatur aut perferendis doloribus
         asperiores repellat."
       </p>
-      <h2>1914 translation by H. Rackham</h2>
+      <h2 id="paragraph9">1914 translation by H. Rackham</h2>
       <p class="noimage">
         "On the other hand, we denounce with righteous indignation and dislike
         men who are so beguiled and demoralized by the charms of pleasure of the

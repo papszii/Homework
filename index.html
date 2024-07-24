@@ -8,6 +8,10 @@
     />
     <title>Hazifeladat</title>
     <link rel="stylesheet" href="style.css" media="screen" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,22 +20,23 @@
     />
   </head>
   <body>
-    <header>
-      <nav id="top">
-        <a class="link" href="#bottom">Jump to bottom</a>
-        <a class="link" href="#paragraph1">What is <span>Lorem Ipsum</span></a>
-        <a class="link" href="#paragraph2">Why do we use it?</a>
-        <a class="link" href="#paragraph3">Where does it come from?</a>
-        <a class="link" href="#paragraph4">Where can I get some?</a>
-        <a class="link" href="#paragraph5"
-          >The standard <span>Lorem Ipsum</span></a
-        >
-      </nav>
+    <header id="top">
+      <nav>
+      <div class="topnav" id="myTopnav">
+        <a href="#bottom" class="active">Jump to</a>
+        <a href="#paragraph1" class="navigation">What is <span>Lorem Ipsum</span></a>
+        <a href="#paragraph2" class="navigation">Why do we use it?</a>
+        <a href="#paragraph3" class="navigation">Where does it come from?</a>
+        <a href="#paragraph4" class="navigation">Where can i get some?</a>
+        <a href="#paragraph5" class="navigation">the standard <span>Lorem Ipsum</span></a>
+        </a>
+      </div>
+    </nav>
     </header>
     <article>
-      <h1>Lorem Ipsum</h1>
-      <h1>Dolor sit amet</h1>
-      <h1>Consectetur adipiscing elit</h1>
+      <h1 class="animaton">Lorem Ipsum</h1>
+      <h1 class="animaton">Dolor sit amet</h1>
+      <h1 class="animaton">Consectetur adipiscing elit</h1>
       <h2 id="paragraph1">What is <span>Lorem Ipsum?</span></h2>
       <div class="container">
         <img
@@ -209,7 +214,7 @@
         pains."
       </p>
     </article>
-    <h1>Send an article to a friend!</h1>
+    <h1 id="article">Send an article to a friend!</h1>
     <form action="">
       <div>
         <label for="first">First Name</label>
@@ -270,6 +275,7 @@
       <div class="down">
         <a class="link" href="#top">Jump to top</a>
         <a class="link" href="https://www.lipsum.com">Reference site!</a>
+        <a class="link" href="https://openart.ai/home">Background by Openartai</a>
       </div>
     </footer>
   </body>

@@ -388,6 +388,11 @@ img {
   transform: scale(1.05);
 }
 
+.form-outline mb-3 {
+  width: 100%;
+  max-width: 22rem;
+}
+
 /* jump to top, bottom, reference */
 
 .link {

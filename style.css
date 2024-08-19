@@ -166,7 +166,7 @@ table {
 
 .topnav a.active {
   background-color: var(--bg-color);
-  color: var(--primary-color);
+  color: var(--font-color);
   padding: 10px;
   margin: 10px;
   border: 10px;
@@ -225,6 +225,14 @@ body {
   background-color: var(--bg-color);
   background-repeat: repeat;
   background-size: 100% 100%;
+}
+
+.active {
+  color: var(--font-color);
+}
+
+#time {
+  color: var(--font-color);
 }
 
 header {
@@ -288,8 +296,22 @@ h1 {
   }
 }
 
+.reader {
+  margin: 10px;
+  padding: 10px;
+  color: var(--font-color);
+}
+
 .navigation {
   color: var(--font-color);
+}
+
+.highlight {
+  background-color: yellow; /* Highlight color */
+}
+
+#search {
+  margin: 17px;
 }
 
 h2 {
@@ -451,7 +473,7 @@ img {
     display: flex;
   }
   h1,
-  #article {
+  #friend {
     min-width: 240px;
     max-width: 360px;
     font-size: 30px;

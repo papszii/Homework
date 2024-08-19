@@ -31,8 +31,44 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function readingTime() {
+        const text = document.body.innerText; // Get text from the entire body
+        const wpm = 225; // Words per minute
+        const words = text.trim().split(/\s+/).length; // Count words
+        const time = Math.ceil(words / wpm); // Calculate time in minutes
+        document.getElementById("time").innerText = time; // Display time
+      }
+      window.onload = readingTime; // Call the function when the window loads
+    </script>
+    <script>
+      function highlightText() {
+        const searchInput = document.getElementById("search").value;
+        const article = document.getElementById("article");
+        const text = article.innerText;
+        const regex = new RegExp(`(${searchInput})`, "gi"); // Create a regex for case-insensitive matching
+
+        // Replace the inner HTML with highlighted text
+        article.innerHTML = text.replace(
+          regex,
+          '<span class="highlight">$1</span>'
+        );
+      }
+    </script>
     <header id="top">
       <nav>
+        <div>
+          <h1>Live Search</h1>
+          <input
+            type="text"
+            id="search"
+            placeholder="Type a word to search..."
+            oninput="highlightText()"
+          />
+        </div>
+        <div class="reader">
+          Estimated reading time: <span id="time"></span> minute(s)
+        </div>
         <div class="topnav" id="myTopnav">
           <a href="#bottom" class="active">Jump to</a>
           <a href="#paragraph1" class="navigation"
@@ -47,7 +83,7 @@
         </div>
       </nav>
     </header>
-    <article>
+    <article id="article">
       <h2 class="animaton first">Lorem Ipsum</h2>
       <h2 class="animaton second">Dolor sit amet</h2>
       <h2 class="animaton third">Consectetur adipiscing elit</h2>
@@ -228,10 +264,10 @@
         pains."
       </p>
     </article>
-    <h1 id="article">Send an article to a friend!</h1>
+    <h1 id="friend">Send an article to a friend!</h1>
     <form>
       <div class="mb-3">
-        <label for="" class="form-label">First Name</label>
+        <label for="Firstname" class="form-label">First Name</label>
         <input
           type="text"
           class="form-control"
@@ -240,7 +276,7 @@
         />
       </div>
       <div class="mb-3">
-        <label for="" class="form-label">Last Name</label>
+        <label for="Lastname" class="form-label">Last Name</label>
         <input
           type="text"
           class="form-control"
@@ -267,7 +303,7 @@
         />
       </div>
       <div class="mb-3">
-        <label for="" class="form-label">Email address</label>
+        <label for="Emailaddress" class="form-label">Email address</label>
         <input
           type="email"
           class="form-control"
@@ -279,7 +315,7 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="" class="form-label">Send message</label>
+        <label for="text" class="form-label">Send message</label>
         <textarea class="form-control" id="text" rows="3"></textarea>
       </div>
       <div class="d-grid gap-2 d-md-block">

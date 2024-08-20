@@ -31,6 +31,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
     <script>
       function readingTime() {
         const text = document.body.innerText; // Get text from the entire body
@@ -42,29 +43,51 @@
       window.onload = readingTime; // Call the function when the window loads
     </script>
     <script>
-      function highlightText() {
-        const searchInput = document.getElementById("search").value;
-        const article = document.getElementById("article");
-        const text = article.innerText;
-        const regex = new RegExp(`(${searchInput})`, "gi"); // Create a regex for case-insensitive matching
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create an instance of mark.js and pass an argument containing
+        // the DOM object of the context (where to search for matches)
+        var markInstance = new Mark(document.querySelector(".context"));
+        // Cache DOM elements
+        var keywordInput = document.querySelector("input[name='keyword']");
+        var optionInputs = document.querySelectorAll("input[name='opt[]']");
 
-        // Replace the inner HTML with highlighted text
-        article.innerHTML = text.replace(
-          regex,
-          '<span class="highlight">$1</span>'
-        );
-      }
+        function performMark() {
+          // Read the keyword
+          var keyword = keywordInput.value;
+          // Determine selected options
+          var options = {};
+          [].forEach.call(optionInputs, function (opt) {
+            options[opt.value] = opt.checked;
+          });
+          // Remove previous marked elements and mark
+          // the new keyword inside the context
+          markInstance.unmark({
+            done: function () {
+              markInstance.mark(keyword, options);
+            }
+          });
+        }
+
+        // Listen to input and option changes
+        keywordInput.addEventListener("input", performMark);
+        for (var i = 0; i < optionInputs.length; i++) {
+          optionInputs[i].addEventListener("change", performMark);
+        }
+      });
     </script>
     <header id="top">
       <nav>
         <div>
           <h1>Live Search</h1>
-          <input
-            type="text"
-            id="search"
-            placeholder="Type a word to search..."
-            oninput="highlightText()"
-          />
+          <div class="col-xs-6">
+            <span>Type in a keyword:</span>
+            <input
+              type="text"
+              name="keyword"
+              class="form-control input-sm"
+              placeholder="Lorem ipsum..."
+            />
+          </div>
         </div>
         <div class="reader">
           Estimated reading time: <span id="time"></span> minute(s)
@@ -83,7 +106,7 @@
         </div>
       </nav>
     </header>
-    <article id="article">
+    <article class="context">
       <h2 class="animaton first">Lorem Ipsum</h2>
       <h2 class="animaton second">Dolor sit amet</h2>
       <h2 class="animaton third">Consectetur adipiscing elit</h2>

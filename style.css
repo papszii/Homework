@@ -350,7 +350,7 @@ span:hover {
 }
 
 #url {
-  color: #0b4af7a1;
+  color: var(--primary-color);
   transition-duration: 0.4s;
   cursor: pointer;
 }

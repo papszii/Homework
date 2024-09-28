@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
     <title>Hazifeladat</title>
     <link
@@ -94,10 +94,13 @@
         <div>
           <h1>Live Search</h1>
           <div class="col-xs-6">
+            <label for="searchKeyword" class="form-label"
+              >Type in a keyword:</label
+            >
             <span>Type in a keyword:</span>
             <input
               type="text"
-              name="keyword"
+              name="title undefined"
               class="form-control input-sm"
               placeholder="Lorem ipsum..."
             />
@@ -122,8 +125,8 @@
     </header>
     <article class="context">
       <h2 class="animaton first">Lorem Ipsum</h2>
-      <h2 class="animaton second">Dolor sit amet</h2>
-      <h2 class="animaton third">Consectetur adipiscing elit</h2>
+      <h3 class="animaton second">Dolor sit amet</h3>
+      <h4 class="animaton third">Consectetur adipiscing elit</h4>
       <h2 id="paragraph1">What is <span>Lorem Ipsum?</span></h2>
       <div class="container">
         <img src="lorem1.PNG" alt="lorem ipsum sample text" class="image" />
@@ -293,7 +296,7 @@
         pains."
       </p>
     </article>
-    <h1 id="friend">Send an article to a friend!</h1>
+    <p id="friend">Send an article to a friend!</p>
     <form>
       <div class="mb-3">
         <label for="Firstname" class="form-label">First Name</label>
@@ -314,6 +317,7 @@
         />
       </div>
       <div class="mb-3">
+        <label for="age" class="form-label">Select your age</label>
         <select class="form-select" aria-label="Default select example">
           <option selected>Select your age</option>
           <option value="1">Under 18</option>
@@ -348,7 +352,7 @@
         <textarea class="form-control" id="text" rows="3"></textarea>
       </div>
       <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-primary" type="button">Submit</button>
+        <input class="btn btn-primary" type="submit" />
       </div>
     </form>
     <footer id="bottom">

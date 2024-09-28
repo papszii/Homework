@@ -196,8 +196,8 @@ table {
 :root {
   --primary-color: #ffffff;
   --secondary-color: #000000;
-  --font-color: #ff9500;
-  --bg-color: #115074;
+  --font-color: #ffffff;
+  --bg-color: #000000;
   --heading-color: #292922;
 }
 
@@ -207,7 +207,7 @@ table {
   :root {
     --primary-color: #726f6f;
     --secondary-color: #ffffff;
-    --font-color: #cf7900;
+    --font-color: #ffffff;
     --bg-color: #000000;
     --heading-color: #292922;
   }
@@ -350,7 +350,7 @@ span:hover {
 }
 
 #url {
-  color: #0b4af7a1;
+  color: var(--primary-color);
   transition-duration: 0.4s;
   cursor: pointer;
 }
